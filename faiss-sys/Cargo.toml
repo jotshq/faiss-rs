@@ -7,12 +7,17 @@ license = "MIT/Apache-2.0"
 repository = "https://github.com/Enet4/faiss-rs"
 links = "faiss_c"
 categories = ["external-ffi-bindings", "algorithms"]
+edition = "2018"
 
 [features]
 gpu = []
+build = ["cmake"]
 
 [badges.maintenance]
 status = "passively-maintained"
 
 [package.metadata.docs.rs]
 features = ["gpu"]
+
+[build-dependencies]
+cmake = { version = "0.1", optional = true }
